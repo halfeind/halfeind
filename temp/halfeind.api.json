@@ -1,0 +1,576 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.7.8",
+    "schemaVersion": 1003,
+    "oldestForwardsCompatibleVersion": 1001
+  },
+  "kind": "Package",
+  "canonicalReference": "halfeind!",
+  "docComment": "",
+  "name": "halfeind",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "halfeind!",
+      "name": "",
+      "members": [
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!AccountBubble:class",
+          "docComment": "/**\n * The AccountBubble component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class AccountBubble extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "AccountBubbleProps",
+              "canonicalReference": "halfeind!AccountBubbleProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "AccountBubble",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!Checkbox:class",
+          "docComment": "/**\n * The Checkbox component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class Checkbox extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "CheckboxProps",
+              "canonicalReference": "halfeind!CheckboxProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Checkbox",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!ColorPicker:class",
+          "docComment": "/**\n * The ColorPicker component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class ColorPicker extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ColorPickerProps",
+              "canonicalReference": "halfeind!ColorPickerProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ColorPicker",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!ConfirmDialog:class",
+          "docComment": "/**\n * The ConfirmDialog component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class ConfirmDialog extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ConfirmDialogProps",
+              "canonicalReference": "halfeind!ConfirmDialogProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ConfirmDialog",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!ContainedButton:class",
+          "docComment": "/**\n * The ContainedButton component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class ContainedButton extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "ContainedButtonProps",
+              "canonicalReference": "halfeind!ContainedButtonProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ContainedButton",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!DatePicker:class",
+          "docComment": "/**\n * The DatePicker component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class DatePicker extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "DatePickerProps",
+              "canonicalReference": "halfeind!DatePickerProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "DatePicker",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!Dropdown:class",
+          "docComment": "/**\n * The Dropdown component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class Dropdown extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "DropdownProps",
+              "canonicalReference": "halfeind!DropdownProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Dropdown",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!Input:class",
+          "docComment": "/**\n * The Input component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class Input extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "InputProps",
+              "canonicalReference": "halfeind!InputProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Input",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!MonthPicker:class",
+          "docComment": "/**\n * The MonthPicker component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class MonthPicker extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "MonthPickerProps",
+              "canonicalReference": "halfeind!MonthPickerProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "MonthPicker",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!NumberInput:class",
+          "docComment": "/**\n * The NumberInput component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class NumberInput extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "NumberInputProps",
+              "canonicalReference": "halfeind!NumberInputProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "NumberInput",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!OutlineButton:class",
+          "docComment": "/**\n * The OutlineButton component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class OutlineButton extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "OutlineButtonProps",
+              "canonicalReference": "halfeind!OutlineButtonProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "OutlineButton",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!Pane:class",
+          "docComment": "/**\n * The Pane component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class Pane extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "PaneProps",
+              "canonicalReference": "halfeind!PaneProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Pane",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!Switch:class",
+          "docComment": "/**\n * The Switch component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class Switch extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "SwitchProps",
+              "canonicalReference": "halfeind!SwitchProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Switch",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!Tag:class",
+          "docComment": "/**\n * The Tag component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class Tag extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "TagProps",
+              "canonicalReference": "halfeind!TagProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Tag",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "halfeind!TextButton:class",
+          "docComment": "/**\n * The TextButton component\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare class TextButton extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "React.Component",
+              "canonicalReference": "!unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "<"
+            },
+            {
+              "kind": "Reference",
+              "text": "TextButtonProps",
+              "canonicalReference": "halfeind!TextButtonProps:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", any> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "TextButton",
+          "members": [],
+          "extendsTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          },
+          "implementsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}

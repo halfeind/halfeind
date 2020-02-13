@@ -1,0 +1,50 @@
+.mc{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  .btn{
+    font-family: 'Helvetica';
+    width:100%;
+    font-size: 12px;
+    letter-spacing: 0.02857em;
+    padding: 9px 12px;
+    outline: inherit;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 500;
+    &:hover,&:focus{
+       opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.6;
+    }
+  }
+  
+  .cb,.ob{
+      border: 1px solid #00AF66;
+  }    
+  .ob,.tb{
+      color: #00AF66;
+      background: none;
+  }
+  .cb{
+      background-color: #00AF66;
+      color: white;
+  }
+  .tb{
+      border: none;
+      width: auto;
+  }
+  .b_d{
+      background-color: lightgray;
+      color: gray;
+      border: 1px solid lightgray;
+      &:hover,&:focus{
+          opacity: 1;
+      }
+      &:active{
+          opacity: 1;
+      }
+  }
+}
+

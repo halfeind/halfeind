@@ -1,0 +1,35 @@
+.mc{
+    display:inline-flex;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+    }
+    .in_c{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .i{
+            width: inherit;
+            height:inherit;
+        }
+        .n{
+            font-size: 17px;
+            font-weight: 600;
+            font-family: 'Helvetica';
+        }
+        .i{
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    .l_c{
+        font-weight: 500;
+        margin-left: 10px;
+        font-family: 'Helvetica';
+    }
+    
+}

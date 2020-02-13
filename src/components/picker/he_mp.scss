@@ -1,0 +1,43 @@
+.c{
+    position: relative;
+    width: 100%;
+    .m_c{
+        height: 225px;
+        max-width: 300px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .m{
+            flex: 1 1 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .ic{
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                &:hover{
+                    width: 45px;
+                    height: 45px;
+                    color: #FEFEFE;
+                    background: rgba(0,175,102,0.6);
+                    border-radius: 3px;
+                }
+            }
+            .am{
+                width: 35px;
+                height: 35px;
+                color: #FEFEFE;
+                background: rgba(0,175,102,0.8);
+                border-radius:  3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+    }
+}

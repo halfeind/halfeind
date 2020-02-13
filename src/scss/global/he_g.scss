@@ -1,0 +1,15 @@
+.u{
+    text-transform: uppercase;
+}
+.ns{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.nscrl{
+    height: 100vh;
+    overflow-y: hidden;
+    //padding-right: 15px;
+}

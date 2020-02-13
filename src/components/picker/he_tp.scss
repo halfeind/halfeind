@@ -1,0 +1,55 @@
+.mc{
+    .omc{
+        position: absolute;
+        //width: 100%;
+        .oc{
+            min-height: 100px;
+            max-height: 250px;
+            overflow-y: auto;
+            //position: absolute;
+            border: 1px solid rgb(185, 187, 190);
+            border-radius: 3px;
+            background-color: #FEFEFE;
+            border-radius: 0px 0px 3px 3px; 
+            z-index: 999;
+            display: inline-flex;
+            flex-flow: row;
+            padding: 0 15px;
+            .o{
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                .ti{
+                    width: 38px;
+                    height: 38px;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+                .a{
+                    cursor: pointer;
+                }
+                .a_d{
+                    margin-top: 5px;
+                    margin-bottom: -5px;
+                }
+                .bc{
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    .b{
+                        margin: 3px;
+                    }
+                }
+            }
+            .s{
+                margin: auto;
+                font-weight:600;
+            }
+        }
+    }        
+}

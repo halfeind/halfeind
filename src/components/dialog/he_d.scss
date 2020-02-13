@@ -1,0 +1,95 @@
+.o{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    position: fixed;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    z-index: 999;
+    .mc{
+        display: inline-flex;
+        flex-flow: column;
+        min-width:280px;
+        max-width: 575px;
+        max-height: 780px;
+        background-color: #fff;
+        border-radius: 3px;
+        .uh_c{
+            min-height: 20px;
+            background-color: #fff;
+        }
+        .h_c{
+            background-color: #fff;
+            margin: 0;
+            padding: 0px 30px 15px 24px;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            .t{
+                font-family: 'Helvetica';
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .ci{
+                margin-left: auto;
+                width: 15px;
+                height: 15px;
+                position: relative;
+                cursor: pointer;
+                &:after {
+                    content: '';
+                    height: 15px;
+                    border-left: 2px solid #000;
+                    position: absolute;
+                    transform: rotate(45deg);
+                    left: 7px;
+                }
+                &:before {
+                    content: '';
+                    height: 15px;
+                    border-left: 2px solid #000;
+                    position: absolute;
+                    transform: rotate(-45deg);
+                    left: 7px;
+                }
+            }
+        }
+        .c_c{
+            margin: 0;
+            padding: 0px 46px 10px 24px;
+            overflow: auto;
+            .d{
+                font-family: 'Helvetica';
+                color: rgba(0,0,0,0.6);
+                font-size: 13px;
+                font-weight: 700;
+                overflow: auto;
+                margin-bottom: 12px;
+                
+            }
+        }
+        .f_c{
+            min-height: 42px;
+            background-color: #f3f3f3;
+            display: flex;
+            flex-flow: row;
+            .f_l_c{
+                margin-left: 10px;
+            }
+            .f_r_c{
+                margin-left: auto;
+                margin-right: 10px;
+                display: flex;
+                flex-flow: row;
+                font-size: 12px;
+                div{
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+}
