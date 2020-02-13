@@ -10,7 +10,7 @@
 npm install --save halfeind
 ```
 
-## Usage
+<!-- ## Usage
 
 ```jsx
 import React, { Component } from 'react'
@@ -24,7 +24,7 @@ class Example extends Component {
     )
   }
 }
-```
+``` -->
 
 ## License
 
