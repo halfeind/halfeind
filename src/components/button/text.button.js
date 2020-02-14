@@ -12,13 +12,13 @@ class TextButton extends Component {
     }
 
     render() {
-        const { children, disabled, uppercase, textColor } = this.props;
+        const { children, disabled, uppercase, textColor, tabindex } = this.props;
 
         const buttonStyle = `${btnStyle.btn} ${btnStyle.tb} ${(disabled ? btnStyle.b_d:'')} ${(uppercase?gStyle.u:'')}`;
 
         return (
             <div className={btnStyle.mc}>
-                <button className={buttonStyle} style={{color:textColor}}  disabled={disabled} onClick={this.onClick}>{children}</button>
+                <button tabindex={tabindex} className={buttonStyle} style={{color:textColor}}  disabled={disabled} onClick={this.onClick}>{children}</button>
             </div>
         );
     }
@@ -36,6 +36,7 @@ TextButton.defaultProps = {
     disabled: false,
     uppercase: false,
     textColor: '#00AF66',
+    tabindex: 0,
     onClick: undefined
 }
 TextButton.propTypes = {
@@ -43,6 +44,7 @@ TextButton.propTypes = {
     disabled: PropTypes.bool,
     uppercase: PropTypes.bool,
     textColor: PropTypes.string,
+    tabindex: PropTypes.number,
     onClick: PropTypes.func,
 };
 

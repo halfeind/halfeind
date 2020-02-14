@@ -12,13 +12,13 @@ class OutlineButton extends Component {
     }
 
     render() {
-        const { children, disabled, uppercase, borderColor } = this.props;
+        const { children, disabled, uppercase, borderColor, tabindex } = this.props;
 
         const buttonStyle = `${btnStyle.btn} ${btnStyle.ob} ${(disabled ? btnStyle.b_d:'')} ${(uppercase?gStyle.u:'')}`;
 
         return (
             <div className={btnStyle.mc}>
-                <button className={buttonStyle} style={{color: borderColor, borderColor:borderColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
+                <button tabindex={tabindex} className={buttonStyle} style={{color: borderColor, borderColor:borderColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
             </div>
         );
     }
@@ -36,6 +36,7 @@ OutlineButton.defaultProps = {
     disabled: false,
     uppercase: false,
     borderColor: '#00AF66',
+    tabindex: 0,
     onClick: undefined
 }
 OutlineButton.propTypes = {
@@ -43,6 +44,7 @@ OutlineButton.propTypes = {
     disabled: PropTypes.bool,
     uppercase: PropTypes.bool,
     borderColor: PropTypes.string,
+    tabindex: PropTypes.number,
     onClick: PropTypes.func,
 };
 

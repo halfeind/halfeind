@@ -12,13 +12,13 @@ class ContainedButton extends Component {
     }
 
     render() {
-        const { children, disabled, uppercase, backgroundColor} = this.props;
+        const { children, disabled, uppercase, backgroundColor, tabindex} = this.props;
 
         const buttonStyle = `${btnStyle.btn} ${btnStyle.cb} ${(disabled ? btnStyle.b_d:'')} ${(uppercase?gStyle.u:'')}`;
 
         return (
             <div className={btnStyle.mc}>
-                <button className={buttonStyle} style={{borderColor:backgroundColor, backgroundColor:backgroundColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
+                <button tabindex={tabindex} className={buttonStyle} style={{borderColor:backgroundColor, backgroundColor:backgroundColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
             </div>
         );
     }
@@ -36,6 +36,7 @@ ContainedButton.defaultProps = {
   disabled: false,
   uppercase: false,
   backgroundColor: '#00AF66',
+  tabindex: 0,
   onClick: undefined
 }
 ContainedButton.propTypes = {
@@ -43,6 +44,7 @@ ContainedButton.propTypes = {
   disabled: PropTypes.bool,
   uppercase: PropTypes.bool,
   backgroundColor: PropTypes.string,
+  tabindex: PropTypes.number,
   onClick: PropTypes.func,
 };
 

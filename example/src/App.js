@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 
-// import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
+import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
 // import {ContainedButton, TextButton} from 'halfeind';
-import { Checkbox } from 'halfeind';
-// import { Input, NumberInput } from 'halfeind/lib/input';
+// import { Checkbox } from 'halfeind';
+import { Input, NumberInput } from 'halfeind';
 // import {Dropdown} from 'halfeind/lib/select';
-import {AccountBubble} from 'halfeind';
+// import {AccountBubble} from 'halfeind';
 // import { ConfirmDialog } from 'halfeind/lib/dialog';
 // import { Pane } from 'halfeind';
 // import { DatePicker } from 'halfeind/lib/picker';
-import {Switch} from 'halfeind';
-import {Style} from 'halfeind';
+// import {Switch} from 'halfeind';
+// import {Style} from 'halfeind';
 // import { Tag } from 'halfeind/lib/tag';
 // import { Slider } from 'halfeind/lib/slider';
 // const options = [{key:0, value:'HalfEind'},{key:1, value:'Lyjel'},{key:2, value:'Ready Set Time'},{key:3, value:'Capital Nord'},{key:4, value:'Orellius'}]
@@ -48,8 +48,8 @@ export default class App extends Component {
         <Tag value='12345' closable  visible={tag3Visible}onClose={()=>this.setState({
           tag3Visible:false
         })}/> */}
-
-        <Switch activeSuffix='test' onChange={(state)=>{console.log(state)}}/>
+        <Input label='username' uppercase />
+        {/* <Switch activeSuffix='test' onChange={(state)=>{console.log(state)}}/> */}
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
         {/* <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
         onKeySelected={(key)=>
@@ -70,10 +70,12 @@ export default class App extends Component {
         <Input label='Input' type='password' required />
         <Input label='Input' type='number' required />
         <NumberInput label='NumberInput' /> */}
-        <Checkbox label='Checkbox' />
-        <AccountBubble radius={45} label='Account Bubble' name='Account Bubble'/>
-        {/* <ContainedButton backgroundColor='#ff0ff0' uppercase onClick={()=>{this.setState({paneVisible:true})}}>ContainedButton</ContainedButton>
-        <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton> */}
+        {/* <Checkbox label='Checkbox' /> */}
+        {/* <AccountBubble radius={45} label='Account Bubble' name='Account Bubble'/> */}
+        <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({paneVisible:true})}}>Login</ContainedButton>
+        <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
+        <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
+        <TextButton tabindex={50} textColor='#00ffff' uppercase>TextButton</TextButton>
         {/* <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
         <TextButton textColor='#00ffff' uppercase>TextButton</TextButton>

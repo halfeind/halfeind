@@ -5,6 +5,7 @@ import {isEmpty, randomString} from 'halfeind-utils';
 import NumberInput from './numberInput';
 
 import iStyle from './he_i.scss';
+import gStyle from '../../scss/global/he_g.scss';
 
 class Input extends Component {
 
@@ -56,7 +57,7 @@ class Input extends Component {
         return (
             <div className={iStyle.mc}>
                 {label&&(
-                    <div className={iStyle.l_c}>
+                    <div className={`${iStyle.l_c} ${gStyle.ns}`}>
                         <label htmlFor={inputId} className={iStyle.l}>{uppercase?label.toUpperCase():label}</label>
                         {required&&(
                             <div className={iStyle.r}>*</div>

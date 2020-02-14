@@ -23,6 +23,9 @@ export interface ButtonProps {
     /** Uppercases the button text. */
     uppercase?: boolean,
 
+    /** Ability to set the tabindex */
+    tabindex?: number,
+
     /**
      * Called after user's click.
      * @returns event - React's original SyntheticEvent.

@@ -1,6 +1,6 @@
 {
   "name": "halfeind",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.3-alpha.1",
   "description": "HalfEind design pattern",
   "author": "halfeind",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
-  "typings": "./dist/halfeind.d.ts",
+  "typings": "dist/halfeind.d.ts",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/plugin-external-helpers": "^7.8.3",
