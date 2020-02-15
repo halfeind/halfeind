@@ -18,7 +18,7 @@ class OutlineButton extends Component {
 
         return (
             <div className={btnStyle.mc}>
-                <button tabindex={tabindex} className={buttonStyle} style={{color: borderColor, borderColor:borderColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
+                <button tabIndex={tabindex} className={buttonStyle} style={{color: borderColor, borderColor:borderColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
             </div>
         );
     }

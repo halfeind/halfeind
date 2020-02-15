@@ -16,6 +16,9 @@ export interface GenericInputProps {
     /** The label of the input. */   
     label: string,
 
+    /** The color of the label. */
+    labelColor: string,
+
     /** A prefix put infront of the input. */   
     prefix: string,
 

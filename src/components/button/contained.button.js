@@ -18,7 +18,7 @@ class ContainedButton extends Component {
 
         return (
             <div className={btnStyle.mc}>
-                <button tabindex={tabindex} className={buttonStyle} style={{borderColor:backgroundColor, backgroundColor:backgroundColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
+                <button tabIndex={tabindex} className={buttonStyle} style={{borderColor:backgroundColor, backgroundColor:backgroundColor}} disabled={disabled} onClick={this.onClick}>{children}</button>
             </div>
         );
     }

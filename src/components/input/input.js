@@ -48,7 +48,7 @@ class Input extends Component {
         />
     }
     renderInput(){
-        const { label, prefix, suffix, color, value, defaultValue, placeHolder, uppercase, required, errorMessage, type } = this.props;
+        const { label, labelColor, prefix, suffix, color, value, defaultValue, placeHolder, uppercase, required, errorMessage, type } = this.props;
         const { errorMessageRequired, isFocus } = this.state;
 
         let inputId = randomString(10);
@@ -58,7 +58,7 @@ class Input extends Component {
             <div className={iStyle.mc}>
                 {label&&(
                     <div className={`${iStyle.l_c} ${gStyle.ns}`}>
-                        <label htmlFor={inputId} className={iStyle.l}>{uppercase?label.toUpperCase():label}</label>
+                        <label htmlFor={inputId} className={iStyle.l} style={{color:labelColor}}>{uppercase?label.toUpperCase():label}</label>
                         {required&&(
                             <div className={iStyle.r}>*</div>
                         )}
@@ -135,6 +135,7 @@ class Input extends Component {
 }
 Input.defaultProps = {
     label: undefined,
+    labelColor: '#0a244d',
     prefix: undefined,
     suffix: undefined,
     color: '#00AF66',
@@ -151,6 +152,7 @@ Input.defaultProps = {
 }
 Input.propTypes = {
     label: PropTypes.string,
+    labelColor: PropTypes.string,
     prefix: PropTypes.string,
     suffix: PropTypes.string,
     color: PropTypes.string,

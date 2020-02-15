@@ -48,7 +48,7 @@ export default class App extends Component {
         <Tag value='12345' closable  visible={tag3Visible}onClose={()=>this.setState({
           tag3Visible:false
         })}/> */}
-        <Input label='username' uppercase />
+        <Input label='username' uppercase labelColor='#ff0000' />
         {/* <Switch activeSuffix='test' onChange={(state)=>{console.log(state)}}/> */}
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
         {/* <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
