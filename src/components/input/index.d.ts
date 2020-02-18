@@ -28,6 +28,9 @@ export interface GenericInputProps {
     /** The color of the input. */   
     color: string,
 
+    /** The name variable of the input */
+    name: string,
+
     /** The defaultvalue of the input. */  
     defaultValue: string,
 
