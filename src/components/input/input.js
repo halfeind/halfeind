@@ -49,7 +49,7 @@ class Input extends Component {
     }
 
     renderInput(){
-        const { label, labelColor, prefix, suffix, color, name, value, defaultValue, placeHolder, uppercase, required, errorMessage, type } = this.props;
+        const { label, labelColor, prefix, suffix, color, autoComplete, name, value, defaultValue, placeHolder, uppercase, required, errorMessage, type } = this.props;
         const { errorMessageRequired, isFocus } = this.state;
 
         let inputId = randomString(10);
@@ -69,7 +69,7 @@ class Input extends Component {
                     {prefix&&(
                         <div className={iStyle.p}>{prefix}</div>
                     )}
-                    <input id={inputId} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
+                    <input id={inputId} autoComplete={autoComplete||'off'} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
                     {suffix&&(
                         <div className={iStyle.s}>{suffix}</div>
                     )}
@@ -141,6 +141,7 @@ Input.defaultProps = {
     prefix: undefined,
     suffix: undefined,
     color: '#00AF66',
+    autoComplete: undefined,
     name: undefined,
     type: 'text',
     value : undefined,
@@ -152,6 +153,7 @@ Input.defaultProps = {
     onChange: undefined,
     onBlur: undefined,
     onFocus: undefined,
+    
 }
 Input.propTypes = {
     label: PropTypes.string,
@@ -159,6 +161,7 @@ Input.propTypes = {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
     color: PropTypes.string,
+    autoComplete: PropTypes.string,
     name: PropTypes.string,
     type: PropTypes.string,
     value: PropTypes.oneOfType([

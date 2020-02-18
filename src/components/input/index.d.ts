@@ -28,6 +28,9 @@ export interface GenericInputProps {
     /** The color of the input. */   
     color: string,
 
+    /** Allow to set autoComplete property */
+    autoComplete: string,
+
     /** The name variable of the input */
     name: string,
 
