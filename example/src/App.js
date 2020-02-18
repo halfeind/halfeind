@@ -48,7 +48,7 @@ export default class App extends Component {
         <Tag value='12345' closable  visible={tag3Visible}onClose={()=>this.setState({
           tag3Visible:false
         })}/> */}
-          <Input label='username' placeHolder={undefined} uppercase labelColor='#ff0000' />
+          <Input label='username' uppercase labelColor='#ff0000' />
           <Input label='password' type='password' uppercase labelColor='#ff0000' />
 
         {/* <Switch activeSuffix='test' onChange={(state)=>{console.log(state)}}/> */}

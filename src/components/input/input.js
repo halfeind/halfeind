@@ -69,7 +69,7 @@ class Input extends Component {
                     {prefix&&(
                         <div className={iStyle.p}>{prefix}</div>
                     )}
-                    <input id={inputId} autoComplete={autoComplete||'off'} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
+                    <input id={inputId} autoComplete={autoComplete} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
                     {suffix&&(
                         <div className={iStyle.s}>{suffix}</div>
                     )}
