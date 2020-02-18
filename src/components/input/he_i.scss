@@ -37,6 +37,20 @@
             box-sizing: border-box;
             font-family: 'Helvetica';
         }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus,
+        input:-internal-autofill-selected
+         {
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0), inset 0 0 0 100px rgba(0, 175, 102,0.2);
+            -webkit-text-fill-color: black;
+        }
     }
     .e_c{
         font-size: 14px;

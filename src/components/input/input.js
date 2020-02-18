@@ -14,7 +14,7 @@ class Input extends Component {
 
         this.state=({
             errorMessageRequired: undefined,
-            isFocus: false,
+            isFocus: false
         });
 
         this.onChange = this.onChange.bind(this);
@@ -47,6 +47,7 @@ class Input extends Component {
             errorMessage={errorMessage}        
         />
     }
+
     renderInput(){
         const { label, labelColor, prefix, suffix, color, name, value, defaultValue, placeHolder, uppercase, required, errorMessage, type } = this.props;
         const { errorMessageRequired, isFocus } = this.state;
@@ -68,7 +69,7 @@ class Input extends Component {
                     {prefix&&(
                         <div className={iStyle.p}>{prefix}</div>
                     )}
-                    <input readonly id={inputId} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
+                    <input id={inputId} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
                     {suffix&&(
                         <div className={iStyle.s}>{suffix}</div>
                     )}
@@ -106,6 +107,7 @@ class Input extends Component {
     }
     onFocus(e){
         const { onFocus } = this.props;
+
         this.setState({
             isFocus: true,
         })
