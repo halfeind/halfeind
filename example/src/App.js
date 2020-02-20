@@ -5,7 +5,7 @@ import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
 // import { Checkbox } from 'halfeind';
 import { Input, NumberInput } from 'halfeind';
 // import {Dropdown} from 'halfeind/lib/select';
-// import {AccountBubble} from 'halfeind';
+import {AccountBubble} from 'halfeind';
 // import { ConfirmDialog } from 'halfeind/lib/dialog';
 // import { Pane } from 'halfeind';
 // import { DatePicker } from 'halfeind/lib/picker';
@@ -73,7 +73,7 @@ export default class App extends Component {
         <Input label='Input' type='number' required />
         <NumberInput label='NumberInput' /> */}
         {/* <Checkbox label='Checkbox' /> */}
-        {/* <AccountBubble radius={45} label='Account Bubble' name='Account Bubble'/> */}
+        <AccountBubble radius={42} label='Account Bubble' name='Account Bubble'/>
         <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({paneVisible:true})}}>Login</ContainedButton>
         <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
