@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {randomHexColor, contrastColor,acronym} from 'halfeind-utils';
 
 import abStyle from './he_ab.scss'
+import gStyle from '../../scss/global/he_g.scss';
 
 
 class AccountBubble extends Component {
@@ -18,7 +19,7 @@ class AccountBubble extends Component {
                     {img?(
                         <img alt='he_ab_alt' className={abStyle.i} src={img}/>
                     ):(
-                        <div className={abStyle.n} style={{color:bubbleColor}}>
+                        <div className={`${abStyle.n} ${gStyle.ns}`} style={{color:bubbleColor}}>
                             {accountName}
                         </div>
                     )}
