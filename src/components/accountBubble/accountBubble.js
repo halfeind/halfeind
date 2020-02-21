@@ -7,6 +7,11 @@ import gStyle from '../../scss/global/he_g.scss';
 
 
 class AccountBubble extends Component {
+    constructor(){
+        super();
+
+        this.onClick = this.onClick.bind(this);
+    }
     render() {
         const { radius, fill, img, label, labelColor, name } = this.props;
 
@@ -14,8 +19,8 @@ class AccountBubble extends Component {
         let accountName = !img && name ? this.getAccountName(name) : '?';
 
         return (
-            <div className={abStyle.mc}>
-                <div className={abStyle.in_c} style={{width:radius, height: radius, minWidth:radius, minHeight: radius,  backgroundColor: fill}}>
+            <div className={abStyle.mc} >
+                <div className={abStyle.in_c} style={{width:radius, height: radius, minWidth:radius, minHeight: radius,  backgroundColor: fill}} onClick={this.onClick}>
                     {img?(
                         <img alt='he_ab_alt' className={abStyle.i} src={img}/>
                     ):(
@@ -38,6 +43,13 @@ class AccountBubble extends Component {
         let accountName = acr.join('').toUpperCase();
         return accountName;
     }
+    onClick(e){
+        const { onClick } = this.props;
+
+        if(!onClick) return;
+
+        onClick(e);
+    }
 }
 AccountBubble.defaultProps = {
     radius: 50,
@@ -46,6 +58,7 @@ AccountBubble.defaultProps = {
     label: undefined,
     labelColor: '#000',
     name: undefined,
+    onClick: undefined,
 }
 AccountBubble.propTypes = {
     radius: PropTypes.number,
@@ -53,7 +66,8 @@ AccountBubble.propTypes = {
     img: PropTypes.string,
     label: PropTypes.oneOfType([PropTypes.object,PropTypes.string]),
     labelColor: PropTypes.string,
-    name: PropTypes.string
+    name: PropTypes.string,
+    onClick: PropTypes.func,
 };
 
 export default AccountBubble;

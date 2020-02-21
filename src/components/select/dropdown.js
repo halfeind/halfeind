@@ -90,7 +90,7 @@ Dropdown.propTypes = {
     options: PropTypes.array,
     placeHolder: PropTypes.string,
     onKeySelected: PropTypes.func,
-    underline: PropTypes.false,
+    underline: PropTypes.bool,
 };
 
 export default Dropdown;

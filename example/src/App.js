@@ -4,7 +4,7 @@ import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
 // import {ContainedButton, TextButton} from 'halfeind';
 // import { Checkbox } from 'halfeind';
 import { Input, NumberInput } from 'halfeind';
-// import {Dropdown} from 'halfeind/lib/select';
+import {Dropdown} from 'halfeind';
 import {AccountBubble} from 'halfeind';
 // import { ConfirmDialog } from 'halfeind/lib/dialog';
 // import { Pane } from 'halfeind';
@@ -13,7 +13,7 @@ import {AccountBubble} from 'halfeind';
 // import {Style} from 'halfeind';
 // import { Tag } from 'halfeind/lib/tag';
 // import { Slider } from 'halfeind/lib/slider';
-// const options = [{key:0, value:'HalfEind'},{key:1, value:'Lyjel'},{key:2, value:'Ready Set Time'},{key:3, value:'Capital Nord'},{key:4, value:'Orellius'}]
+const options = [{key:0, value:'HalfEind'},{key:1, value:'Lyjel'},{key:2, value:'Ready Set Time'},{key:3, value:'Capital Nord'},{key:4, value:'Orellius'}]
 // const footerButtonsRight = [<TextButton key="ConfirmDialogButton1" uppercase>ConfirmDialogButton1</TextButton>,<TextButton key="ConfirmDialogButton2" uppercase>ConfirmDialogButton2</TextButton>];
 // const footerButtonsPane = [<TextButton key="PaneButton1" uppercase>PaneButton1</TextButton>,<ContainedButton key="PaneButton2" uppercase>PaneButton2</ContainedButton>];
 // import { TimePicker, TimeFormat } from 'halfeind';
@@ -22,7 +22,7 @@ export default class App extends Component {
   constructor(){
     super();
     this.state=({
-      //defaultSelectedKey:0,
+      defaultSelectedKey:0,
       // modalVisible: false,
       // paneVisible: false,
       // tag1Visible: true,
@@ -31,7 +31,7 @@ export default class App extends Component {
     })
   } 
   render () {
-    // const { defaultSelectedKey,modalVisible } = this.state;
+    const { defaultSelectedKey,modalVisible } = this.state;
     //const {modalVisible,paneVisible} = this.state;
     // const {tag1Visible,tag2Visible,tag3Visible} = this.state;
 
@@ -53,12 +53,12 @@ export default class App extends Component {
 
         {/* <Switch activeSuffix='test' onChange={(state)=>{console.log(state)}}/> */}
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
-        {/* <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
+        <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
         onKeySelected={(key)=>
             this.setState({
               defaultSelectedKey: key
              })
-          }/> */}
+          }/>
         {/* <Pane title='Pane' description='“That proves you are unusual," returned the Scarecrow; "and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”'
           visible={paneVisible}
           
@@ -78,6 +78,21 @@ export default class App extends Component {
         <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
         <TextButton tabindex={50} textColor='#00ffff' uppercase>TextButton</TextButton>
+          
+        <AccountBubble radius={45} label={<div>
+          <div>Account Bubble</div>
+          <Dropdown 
+          underline
+          options={options} 
+          defaultSelectedKey={defaultSelectedKey}
+          onKeySelected={(key)=>
+            this.setState({
+              defaultSelectedKey: key
+             })
+          }
+          />
+        </div>} labelColor='#000' name='Account Bubble' onClick={(e)=>{console.log(e)}}/>
+          
         {/* <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
         <TextButton textColor='#00ffff' uppercase>TextButton</TextButton>
