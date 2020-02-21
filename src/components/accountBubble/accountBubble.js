@@ -13,14 +13,14 @@ class AccountBubble extends Component {
         this.onClick = this.onClick.bind(this);
     }
     render() {
-        const { radius, fill, img, label, labelColor, name } = this.props;
+        const { radius, fill, img, label, labelColor, name, onClick } = this.props;
 
         let bubbleColor = contrastColor(fill);
         let accountName = !img && name ? this.getAccountName(name) : '?';
 
         return (
             <div className={abStyle.mc} >
-                <div className={abStyle.in_c} style={{width:radius, height: radius, minWidth:radius, minHeight: radius,  backgroundColor: fill}} onClick={this.onClick}>
+                <div className={abStyle.in_c} style={{width:radius, height: radius, minWidth:radius, minHeight: radius,  backgroundColor: fill, cursor:onClick?'pointer':'default'}} onClick={this.onClick}>
                     {img?(
                         <img alt='he_ab_alt' className={abStyle.i} src={img}/>
                     ):(
