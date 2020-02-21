@@ -25,4 +25,10 @@ export interface AccountBubbleProps {
 
     /** Used to fill in the acronym in the avatar. */
     name?: string
+    
+    /**
+     * Called after user's click.
+     * @returns event - React's original SyntheticEvent.
+    */
+   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => React.MouseEvent<HTMLButtonElement>
 }
