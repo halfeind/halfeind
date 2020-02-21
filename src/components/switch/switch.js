@@ -9,29 +9,15 @@ import gStyle from '../../scss/global/he_g.scss';
 
 class Switch extends Component {
 
-    constructor(){
-        super();
-
-        this.state=({
-            active: false
-        })
-    }
-
-    componentDidMount(){
-        const { defaultChecked } = this.props;
-        this.toggleSwitch(defaultChecked);
-    }
-
     render() {
-        const { label, uppercase, switchStyle, activeColor, inactiveColor, activeSuffix,inactiveSuffix } = this.props;
-        const { active } = this.state;
+        const { label, uppercase, switchStyle, checked, activeColor, inactiveColor, activeSuffix,inactiveSuffix } = this.props;
 
         let switchId = randomString(10);
 
-        let scStyle = `${swtStyle.sc} ${switchStyle.numb?swtStyle.sc_b:swtStyle.sc_he} ${active?swtStyle.sc_on:''}`;
-        let sStyle = `${swtStyle.s} ${switchStyle.numb?swtStyle.s_b:swtStyle.s_he} ${active?swtStyle.s_on:''}`;
+        let scStyle = `${swtStyle.sc} ${switchStyle.numb?swtStyle.sc_b:swtStyle.sc_he} ${checked?swtStyle.sc_on:''}`;
+        let sStyle = `${swtStyle.s} ${switchStyle.numb?swtStyle.s_b:swtStyle.s_he} ${checked?swtStyle.s_on:''}`;
 
-        let suffixLabel = active?activeSuffix:inactiveSuffix;
+        let suffixLabel = checked?activeSuffix:inactiveSuffix;
 
         return (
             <div className={swtStyle.mc}>
@@ -40,8 +26,8 @@ class Switch extends Component {
                         <label htmlFor={switchId} className={swtStyle.l}>{uppercase?label.toUpperCase():label}</label>
                     </div>
                 )} */}
-                <div className={swtStyle.cc} onClick={()=>this.toggleSwitch(!active)}>
-                    <div className={scStyle} style={{backgroundColor:active?activeColor:inactiveColor}}>
+                <div className={swtStyle.cc} onClick={()=>this.onChange(!checked)}>
+                    <div className={scStyle} style={{backgroundColor:checked?activeColor:inactiveColor}}>
                         {/* <div className={`${swtStyle.s_t} ${swtStyle.s_t_on} ${gStyle.ns}`}>0</div> */}
                         <div className={sStyle}></div>
                         {/* <div className={`${swtStyle.s_t} ${swtStyle.s_t_off} ${gStyle.ns}`}>1</div> */}
@@ -49,31 +35,25 @@ class Switch extends Component {
                 </div>
                 {(activeSuffix||inactiveSuffix)&&(
                     <div className={swtStyle.suffc}>
-                        <div className={`${swtStyle.suff} ${gStyle.ns}`} onClick={()=>this.toggleSwitch(!active)}>{suffixLabel}</div>
+                        <div className={`${swtStyle.suff} ${gStyle.ns}`} onClick={()=>this.onChange(!checked)}>{suffixLabel}</div>
                     </div>
                 )}
             </div>
         );
     }
-    toggleSwitch(state){
-        this.setState({
-            active: state
-        },this.onChange)
-    }
-    onChange(){
+    onChange(state){
         const { onChange } = this.props;
-        const { active } = this.state;
 
         if(!onChange) return;
 
-        onChange(active);
+        onChange(state);
     }
 }
 Switch.defaultProps = {
     label: undefined,
     activeSuffix:undefined,
     inactiveSuffix:undefined,
-    defaultChecked : false,
+    checked : false,
     uppercase: false,
     activeColor: '#00AF66',
     inactiveColor: 'rgb(171, 171, 173)',
@@ -84,7 +64,7 @@ Switch.propTypes = {
     label: PropTypes.string,
     activeSuffix: PropTypes.string,
     inactiveSuffix: PropTypes.string,
-    defaultChecked: PropTypes.bool,
+    checked: PropTypes.bool,
     uppercase: PropTypes.bool,
     activeColor: PropTypes.string,
     inactiveColor: PropTypes.string,

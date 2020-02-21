@@ -9,7 +9,7 @@ import {AccountBubble} from 'halfeind';
 // import { ConfirmDialog } from 'halfeind/lib/dialog';
 // import { Pane } from 'halfeind';
 // import { DatePicker } from 'halfeind/lib/picker';
-// import {Switch} from 'halfeind';
+import {Switch} from 'halfeind';
 // import {Style} from 'halfeind';
 // import { Tag } from 'halfeind/lib/tag';
 // import { Slider } from 'halfeind/lib/slider';
@@ -23,6 +23,7 @@ export default class App extends Component {
     super();
     this.state=({
       defaultSelectedKey:0,
+      isChecked: true,
       // modalVisible: false,
       // paneVisible: false,
       // tag1Visible: true,
@@ -31,7 +32,7 @@ export default class App extends Component {
     })
   } 
   render () {
-    const { defaultSelectedKey,modalVisible } = this.state;
+    const { defaultSelectedKey,modalVisible, isChecked } = this.state;
     //const {modalVisible,paneVisible} = this.state;
     // const {tag1Visible,tag2Visible,tag3Visible} = this.state;
 
@@ -48,17 +49,17 @@ export default class App extends Component {
         <Tag value='12345' closable  visible={tag3Visible}onClose={()=>this.setState({
           tag3Visible:false
         })}/> */}
-          <Input label='username' uppercase labelColor='#ff0000' />
-          <Input label='password' type='password' uppercase labelColor='#ff0000' />
+          {/* <Input label='username' uppercase labelColor='#ff0000' />
+          <Input label='password' type='password' uppercase labelColor='#ff0000' /> */}
 
-        {/* <Switch activeSuffix='test' onChange={(state)=>{console.log(state)}}/> */}
+        <Switch activeSuffix='test' checked={isChecked} onChange={(state)=>{this.setState({isChecked:state})}}/>
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
-        <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
+        {/* <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
         onKeySelected={(key)=>
             this.setState({
               defaultSelectedKey: key
              })
-          }/>
+          }/> */}
         {/* <Pane title='Pane' description='“That proves you are unusual," returned the Scarecrow; "and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”'
           visible={paneVisible}
           
@@ -74,7 +75,7 @@ export default class App extends Component {
         <NumberInput label='NumberInput' /> */}
         {/* <Checkbox label='Checkbox' /> */}
         <AccountBubble radius={42} label='Account Bubble' name='Account Bubble'/>
-        <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({paneVisible:true})}}>Login</ContainedButton>
+        <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
         <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
         <TextButton tabindex={50} textColor='#00ffff' uppercase>TextButton</TextButton>
