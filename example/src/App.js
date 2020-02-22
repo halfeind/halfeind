@@ -74,9 +74,10 @@ export default class App extends Component {
         <Input label='Input' type='number' required />
         <NumberInput label='NumberInput' /> */}
         {/* <Checkbox label='Checkbox' /> */}
-        <AccountBubble radius={200} label='Account Bubble' name='Account Bubble'/>
+        {/* <AccountBubble radius={200} label='Account Bubble' name='Account Bubble'/>
         <AccountBubble radius={100} label='Account Bubble' name='Account Bubble'/>
-        <AccountBubble radius={45} label='Account Bubble' name='Mattias Verhoeven'/>
+        <AccountBubble radius={45} label='Account Bubble' name='Mattias Verhoeven'/> */}
+        <ContainedButton tabindex={10} backgroundColor='#ff0ff0' className='LULW' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
         {/* <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
         <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
