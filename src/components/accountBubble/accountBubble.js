@@ -17,6 +17,7 @@ class AccountBubble extends Component {
 
         let bubbleColor = contrastColor(fill);
         let accountName = !img && name ? this.getAccountName(name) : '?';
+        let fontSize = radius*0.38;
 
         return (
             <div className={abStyle.mc} >
@@ -24,7 +25,7 @@ class AccountBubble extends Component {
                     {img?(
                         <img alt='he_ab_alt' className={abStyle.i} src={img}/>
                     ):(
-                        <div className={`${abStyle.n} ${gStyle.ns}`} style={{color:bubbleColor}}>
+                        <div className={`${abStyle.n} ${gStyle.ns}`} style={{color:bubbleColor, fontSize: fontSize}}>
                             {accountName}
                         </div>
                     )}

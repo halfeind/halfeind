@@ -52,7 +52,7 @@ export default class App extends Component {
           {/* <Input label='username' uppercase labelColor='#ff0000' />
           <Input label='password' type='password' uppercase labelColor='#ff0000' /> */}
 
-        <Switch activeSuffix='test' checked={isChecked} onChange={(state)=>{this.setState({isChecked:state})}}/>
+        {/* <Switch activeSuffix='test' checked={isChecked} onChange={(state)=>{this.setState({isChecked:state})}}/> */}
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
         {/* <Dropdown options={options} defaultSelectedKey={defaultSelectedKey} underline  
         onKeySelected={(key)=>
@@ -74,13 +74,15 @@ export default class App extends Component {
         <Input label='Input' type='number' required />
         <NumberInput label='NumberInput' /> */}
         {/* <Checkbox label='Checkbox' /> */}
-        <AccountBubble radius={42} label='Account Bubble' name='Account Bubble'/>
-        <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
+        <AccountBubble radius={200} label='Account Bubble' name='Account Bubble'/>
+        <AccountBubble radius={100} label='Account Bubble' name='Account Bubble'/>
+        <AccountBubble radius={45} label='Account Bubble' name='Mattias Verhoeven'/>
+        {/* <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
         <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
-        <TextButton tabindex={50} textColor='#00ffff' uppercase>TextButton</TextButton>
+        <TextButton tabindex={50} textColor='#00ffff' uppercase>TextButton</TextButton> */}
           
-        <AccountBubble radius={45} label={<div>
+        {/* <AccountBubble radius={45} label={<div>
           <div>Account Bubble</div>
           <Dropdown 
           underline
@@ -92,7 +94,7 @@ export default class App extends Component {
              })
           }
           />
-        </div>} labelColor='#000' name='Account Bubble' onClick={(e)=>{console.log(e)}}/>
+        </div>} labelColor='#000' name='Account Bubble' onClick={(e)=>{console.log(e)}}/> */}
           
         {/* <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
