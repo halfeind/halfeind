@@ -49,10 +49,12 @@ class Input extends Component {
     }
 
     renderInput(){
-        const { label, labelColor, prefix, suffix, color, autoComplete, name, value, defaultValue, placeHolder, uppercase, required, errorMessage, type } = this.props;
+        const { label, labelColor, prefix, suffix, color, autoComplete, name, value, defaultValue, placeHolder, uppercase, required, className, errorMessage, type } = this.props;
         const { errorMessageRequired, isFocus } = this.state;
 
         let inputId = randomString(10);
+
+        let inputStyle = `${iStyle.i} ${className?className:''}`
 
         let focusStyle = isFocus ? {borderColor: color}: {}
         return (
@@ -69,7 +71,7 @@ class Input extends Component {
                     {prefix&&(
                         <div className={iStyle.p}>{prefix}</div>
                     )}
-                    <input id={inputId} autoComplete={autoComplete} name={name} style={focusStyle} type={type} className={iStyle.i} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
+                    <input id={inputId} autoComplete={autoComplete} name={name} style={focusStyle} type={type} className={inputStyle} onChange={this.onChange} onFocus={this.onFocus} onBlur={this.onBlur} placeholder={placeHolder} value={value} defaultValue={defaultValue} />
                     {suffix&&(
                         <div className={iStyle.s}>{suffix}</div>
                     )}

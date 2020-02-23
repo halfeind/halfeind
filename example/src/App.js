@@ -49,8 +49,8 @@ export default class App extends Component {
         <Tag value='12345' closable  visible={tag3Visible}onClose={()=>this.setState({
           tag3Visible:false
         })}/> */}
-          {/* <Input label='username' uppercase labelColor='#ff0000' />
-          <Input label='password' type='password' uppercase labelColor='#ff0000' /> */}
+          <Input label='username' className='TEST123' uppercase labelColor='#ff0000' />
+          <Input label='password' type='password' uppercase labelColor='#ff0000' />
 
         {/* <Switch activeSuffix='test' checked={isChecked} onChange={(state)=>{this.setState({isChecked:state})}}/> */}
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
