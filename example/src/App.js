@@ -6,15 +6,15 @@ import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
 import { Input, NumberInput } from 'halfeind';
 import {Dropdown} from 'halfeind';
 import {AccountBubble} from 'halfeind';
-// import { ConfirmDialog } from 'halfeind/lib/dialog';
+import { ConfirmDialog } from 'halfeind';
 // import { Pane } from 'halfeind';
-// import { DatePicker } from 'halfeind/lib/picker';
+import { ColorPicker } from 'halfeind';
 import {Switch} from 'halfeind';
 // import {Style} from 'halfeind';
 // import { Tag } from 'halfeind/lib/tag';
 // import { Slider } from 'halfeind/lib/slider';
 const options = [{key:0, value:'HalfEind'},{key:1, value:'Lyjel'},{key:2, value:'Ready Set Time'},{key:3, value:'Capital Nord'},{key:4, value:'Orellius'}]
-// const footerButtonsRight = [<TextButton key="ConfirmDialogButton1" uppercase>ConfirmDialogButton1</TextButton>,<TextButton key="ConfirmDialogButton2" uppercase>ConfirmDialogButton2</TextButton>];
+const footerButtonsRight = [<TextButton key="ConfirmDialogButton1" uppercase>ConfirmDialogButton1</TextButton>,<TextButton key="ConfirmDialogButton2" uppercase>ConfirmDialogButton2</TextButton>];
 // const footerButtonsPane = [<TextButton key="PaneButton1" uppercase>PaneButton1</TextButton>,<ContainedButton key="PaneButton2" uppercase>PaneButton2</ContainedButton>];
 // import { TimePicker, TimeFormat } from 'halfeind';
 
@@ -24,7 +24,7 @@ export default class App extends Component {
     this.state=({
       defaultSelectedKey:0,
       isChecked: true,
-      // modalVisible: false,
+      modalVisible: true,
       // paneVisible: false,
       // tag1Visible: true,
       // tag2Visible: true,
@@ -118,11 +118,11 @@ export default class App extends Component {
           }
           />
         </div>} labelColor='#000' name='Account Bubble'/> */}
-        {/* <ConfirmDialog  title='ConfirmDialog' isBlocking description='ConfirmDialog description' visible={modalVisible} closable onDismiss={()=>this.setState({modalVisible:false})} onClose={()=>this.setState({modalVisible:false})}
+        <ConfirmDialog  title='ConfirmDialog' isBlocking description='ConfirmDialog description' closeButtonClassName='test' visible={modalVisible} closable onDismiss={()=>this.setState({modalVisible:false})} onClose={()=>this.setState({modalVisible:false})}
         footerButtons={footerButtonsRight}
                 />
 
-        <ColorPicker color='#FF6123' /> */}
+        {/* <ColorPicker color='#FF6123' /> */}
       </div>
     )
   }

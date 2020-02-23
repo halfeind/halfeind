@@ -20,10 +20,10 @@
         border-radius: 3px;
         .uh_c{
             min-height: 20px;
-            background-color: #fff;
+            //background-color: #fff;
         }
         .h_c{
-            background-color: #fff;
+            //background-color: #fff;
             margin: 0;
             padding: 0px 30px 15px 24px;
             display: flex;
@@ -64,7 +64,8 @@
             overflow: auto;
             .d{
                 font-family: 'Helvetica';
-                color: rgba(0,0,0,0.6);
+                //opacity: 0.6;
+                //color: rgba(0,0,0,0.6);
                 font-size: 13px;
                 font-weight: 700;
                 overflow: auto;
@@ -74,7 +75,7 @@
         }
         .f_c{
             min-height: 42px;
-            background-color: #f3f3f3;
+            //background-color: #f3f3f3;
             display: flex;
             flex-flow: row;
             .f_l_c{

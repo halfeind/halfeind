@@ -30,21 +30,24 @@ class ConfirmDialog extends Component {
     }
 
     render() {
-        const { title, description, visible, closable, movable, footerButtons } = this.props;
+        const { title, description, visible, closable, movable, className, closeButtonClassName, footerButtons } = this.props;
         const { top, left } = this.state;
 
         visible && (document.body.classList.add(gStyle.nscrl));
 
+        let dialogStyle = `${dStyle.mc} ${className?className:''}`;
+        let iconStyle = `${dStyle.ci} ${closeButtonClassName?closeButtonClassName:''}`
+
         return (
             visible &&(
                 <div className={dStyle.o} ref={he_d_o => {this.he_d_o = he_d_o;}} onClick={this.onDismiss}>
-                    <div className={dStyle.mc} ref={he_d_mc => {this.he_d_mc = he_d_mc;}} style={{top:top, left:left, position:movable &&'absolute'}} 
+                    <div className={dialogStyle} ref={he_d_mc => {this.he_d_mc = he_d_mc;}} style={{top:top, left:left, position:movable &&'absolute'}} 
                     onMouseDown={()=>movable&&this.changeDialogMove(true)}>
                         <div className={dStyle.uh_c} style={{cursor:movable&&'pointer'}}></div>
                         <div className={dStyle.h_c}>
                             <div className={dStyle.t}>{title}</div>
                             {closable&&(
-                            <div className={dStyle.ci} ref={he_d_ci => {this.he_d_ci = he_d_ci;}} onClick={this.onClose}></div>)}
+                            <div className={iconStyle} ref={he_d_ci => {this.he_d_ci = he_d_ci;}} onClick={this.onClose}></div>)}
                         </div>
                         <div className={dStyle.c_c}>
                             <div className={dStyle.d}>{description}</div>

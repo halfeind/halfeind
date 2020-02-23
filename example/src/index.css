@@ -3,3 +3,9 @@
   padding: 0;
   font-family: Helvetica;
 }
+.test:after{
+      border-left-color: orangered;
+}
+.test:before {
+  border-left-color: orangered;
+}
