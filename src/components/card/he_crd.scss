@@ -5,6 +5,7 @@
     min-height: 50px;
     padding: 15px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #F1F1F1;
     .hc{
         //background-color: #fff;
         //margin: 0;
@@ -19,42 +20,59 @@
             font-size: 20px;
             font-weight: 500;
         }
-        .ic{
+        .mnc{
             margin-left: auto;
-            display: flex;
-            align-items: center;
-            .i{
-                cursor: pointer;
-            }   
-        }
-        .dc{
-            display: block;
-            width: 185px;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            right: 0%;
-            border-radius: 3px 0 3px 3px;
-            .do{
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
+            position: relative;
+            .ic{
+                
                 display: flex;
-                flex-flow: row;
                 align-items: center;
-                cursor: pointer;
-                .he_lyjel_c_dd_i{
-                    margin-right: 7px;
-                }
-                .he_lyjel_c_dd_t{
-                    font-size: 15px;
-                }
-                &:hover{
-                    background-color: #ddd;
+                .i{
+                    cursor: pointer;
                 }   
             }
+            .dc{
+                position: absolute;
+                background-color: #F1F1F1;
+                right: 0;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                border-radius: 3px 0 3px 3px;
+                
+                .do{
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    overflow: hidden;
+                    .he_lyjel_c_dd_i{
+                        margin-right: 7px;
+                    }
+                    .he_lyjel_c_dd_t{
+                        font-size: 15px;
+                    }
+                    &:hover{
+                        background-color: #ddd;
+                    }   
+                }
+            }
+        }
+    }
+    .cc{
+        //margin: 0;
+        margin: 5px 0px;
+        overflow: auto;
+        .d{
+            font-family: 'Helvetica';
+            //opacity: 0.6;
+            //color: rgba(0,0,0,0.6);
+            font-size: 13px;
+            overflow: auto;
+            margin-bottom: 12px;
+            
         }
     }
     .fc{

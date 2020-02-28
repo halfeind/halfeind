@@ -3,9 +3,9 @@
   padding: 0;
   font-family: Helvetica;
 }
-.test:after{
-      border-left-color: orangered;
+.test{
+  fill: white
 }
-.test:before {
-  border-left-color: orangered;
+.testMenu{
+  background-color: #1E1E1E !important;
 }

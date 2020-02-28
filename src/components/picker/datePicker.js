@@ -58,7 +58,6 @@ class DatePicker extends Component {
     }
     renderPicker(){
         const { year, month, shownPicker } = this.state;
-        console.log(this.props.startDay);
         switch(shownPicker){
             case 0: return this.renderDatePicker();
             case 1: return <MonthPicker month={NumbToMonthPicker[month.numb]} year={year} onChange={this.monthPickerChange}/>;
@@ -66,8 +65,7 @@ class DatePicker extends Component {
     }
     renderDatePicker(){
         const { month, year } = this.state; 
-        
-
+    
         return (
             <div className={dpStyle.mc}>
                 <div className={dpStyle.h_c}>
@@ -143,6 +141,7 @@ class DatePicker extends Component {
         let firstDayOfMonth =  previousLast===1 ? getDayByDate(month,previousLast,year).numb-startDay.numb : 0;
 
         let previousMonth = month===0?11:month-1;
+        let nextMonth = month===11?0:month+1;
         let maximumDaysPreviousMonth = daysInMonth(previousMonth,year);
         let maximumDays = daysInMonth(month,year);
 
@@ -154,15 +153,12 @@ class DatePicker extends Component {
         //firstDayOfMonth = -firstDayOfMonth>0?6-firstDayOfMonth:firstDayOfMonth;
         //let daysMonthBefore = firstDayOfMonth<0?renderingPre?(firstDayOfMonth+1+7):firstDayOfMonth+1:firstDayOfMonth-1;
 
-        while(daysMonthBefore>-1){
-                days.push(<div key={randomString(10)} className={d_naStyle} onClick={()=>{
-                    this.changeDate(month,year);
-            }
-            }>{maximumDaysPreviousMonth-daysMonthBefore}</div>)
-            daysMonthBefore--;
-            // if(daysMonthBefore==-(firstDayOfMonth-1)){
-            //     return {lastDay: 1, days: days, isRenderingDays: isRenderingDays};
-            // }       
+        
+        for(daysMonthBefore; daysMonthBefore>-1; daysMonthBefore--){
+            let day = maximumDaysPreviousMonth-daysMonthBefore;
+            days.push(<div key={randomString(10)} className={d_naStyle} onClick={()=>{
+                this.onChange(previousMonth,day,month===0?year-1:year)
+            }}>{day}</div>)
         }
 
         let amount = maximumDays-(previousLast);
@@ -172,12 +168,13 @@ class DatePicker extends Component {
             }
             let isToday = showToday&&today.d.date===daysCurrentMonth&&today.m.numb===month&&today.y===year;
             let tdStyle = `${isToday?dpStyle.d_td:''}`;
-            days.push(<div key={randomString(10)} className={dpStyle.d}  onClick={()=>this.onChange(month,daysCurrentMonth,year)}><div className={tdStyle}>{daysCurrentMonth}</div></div>)
+            days.push(<div key={randomString(10)} className={dpStyle.d} onClick={()=>this.onChange(month,daysCurrentMonth,year)}><div className={tdStyle}>{daysCurrentMonth}</div></div>)
         }
         if(7-amount>0){
             for(let daysMonthAfter = 1; daysMonthAfter<7-amount; daysMonthAfter++){
                 days.push(<div key={randomString(10)} className={d_naStyle} onClick={()=>{
-                    this.changeDate(month,year);
+                    this.onChange(nextMonth,daysMonthAfter,month===11?year+1:year)
+                    //this.changeDate(nextMonth,year);
                 }
                 
                 }>{daysMonthAfter}</div>)
@@ -201,10 +198,10 @@ class DatePicker extends Component {
         return ordered;
     }
     changeDate(month,year){
-        this.setState({
-            month: getMonthName(month===0?11:month-1),
-            year: month===0?year-1:year
-        });
+        // this.setState({
+        //     month: getMonthName(month),
+        //     year: month===-1?year-1:year
+        // });
     }
     monthPickerChange(month,year){
         this.setState({
