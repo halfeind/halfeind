@@ -135,7 +135,7 @@ export default class App extends Component {
         <Card menuItems={footerButtonsRight} description='“That proves you are unusual," returned the Scarecrow; "and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”'
           title='Card' width={"25%"} footer={footerButtonsPane} />
         <Card menuItems={footerButtonsRight} description='“That proves you are unusual," returned the Scarecrow; "and I am convinced that the only people worthy of consideration in this world are the unusual ones. For the common folks are like the leaves of a tree, and live and die unnoticed.”'
-          title='Card' width={"25%"} footer={footerButtonsPane} menuIconClassName='test' menuClassName='testMenu' onMenuItemClick={(index)=>{console.log(index)}} />
+          title='Card' width={300} menuIconClassName='test' menuClassName='testMenu' onMenuItemClick={(index)=>{console.log(index)}} />
       </div>
     )
   }
