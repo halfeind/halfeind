@@ -1,6 +1,6 @@
 {
   "name": "halfeind",
-  "version": "0.0.10-alpha.0",
+  "version": "0.0.10-alpha.1",
   "description": "HalfEind design pattern",
   "author": "halfeind",
   "license": "MIT",
@@ -68,5 +68,9 @@
   "files": [
     "dist/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@mdi/font": "^4.9.95",
+    "@mdi/js": "^4.9.95",
+    "@mdi/react": "^1.3.0"
+  }
 }

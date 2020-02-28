@@ -1,30 +1,33 @@
 import React, { Component } from 'react'
 
-import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
-// import {ContainedButton, TextButton} from 'halfeind';
+// import {ContainedButton, OutlineButton, TextButton} from 'halfeind';
+import {ContainedButton, TextButton} from 'halfeind';
 // import { Checkbox } from 'halfeind';
-import { Input, NumberInput } from 'halfeind';
-import {Dropdown} from 'halfeind';
-import {AccountBubble} from 'halfeind';
-import { ConfirmDialog } from 'halfeind';
+// import { Input, NumberInput } from 'halfeind';
+// import {Dropdown} from 'halfeind';
+// import {AccountBubble} from 'halfeind';
+// import { ConfirmDialog } from 'halfeind';
 // import { Pane } from 'halfeind';
-import { ColorPicker } from 'halfeind';
-import {Switch} from 'halfeind';
+// import { ColorPicker } from 'halfeind';
+// import {Switch} from 'halfeind';
 // import {Style} from 'halfeind';
 // import { Tag } from 'halfeind/lib/tag';
 // import { Slider } from 'halfeind/lib/slider';
-const options = [{key:0, value:'HalfEind'},{key:1, value:'Lyjel'},{key:2, value:'Ready Set Time'},{key:3, value:'Capital Nord'},{key:4, value:'Orellius'}]
-const footerButtonsRight = [<TextButton key="ConfirmDialogButton1" uppercase>ConfirmDialogButton1</TextButton>,<TextButton key="ConfirmDialogButton2" uppercase>ConfirmDialogButton2</TextButton>];
+import { Card } from 'halfeind';
+// const options = [{key:0, value:'HalfEind'},{key:1, value:'Lyjel'},{key:2, value:'Ready Set Time'},{key:3, value:'Capital Nord'},{key:4, value:'Orellius'}]
+const footerButtonsRight = [<TextButton key="TextButton1" uppercase>TextButton1</TextButton>,<TextButton key="TextButton12" uppercase>TextButton12</TextButton>];
 // const footerButtonsPane = [<TextButton key="PaneButton1" uppercase>PaneButton1</TextButton>,<ContainedButton key="PaneButton2" uppercase>PaneButton2</ContainedButton>];
 // import { TimePicker, TimeFormat } from 'halfeind';
+
+
 
 export default class App extends Component {
   constructor(){
     super();
     this.state=({
-      defaultSelectedKey:0,
-      isChecked: true,
-      modalVisible: true,
+      // defaultSelectedKey:0,
+      // isChecked: true,
+      // modalVisible: true,
       // paneVisible: false,
       // tag1Visible: true,
       // tag2Visible: true,
@@ -32,7 +35,7 @@ export default class App extends Component {
     })
   } 
   render () {
-    const { defaultSelectedKey,modalVisible, isChecked } = this.state;
+    // const { defaultSelectedKey,modalVisible, isChecked } = this.state;
     //const {modalVisible,paneVisible} = this.state;
     // const {tag1Visible,tag2Visible,tag3Visible} = this.state;
 
@@ -49,8 +52,8 @@ export default class App extends Component {
         <Tag value='12345' closable  visible={tag3Visible}onClose={()=>this.setState({
           tag3Visible:false
         })}/> */}
-          <Input label='username' className='TEST123' uppercase labelColor='#ff0000' />
-          <Input label='password' type='password' uppercase labelColor='#ff0000' />
+          {/* <Input label='username' className='TEST123' uppercase labelColor='#ff0000' />
+          <Input label='password' type='password' uppercase labelColor='#ff0000' /> */}
 
         {/* <Switch activeSuffix='test' checked={isChecked} onChange={(state)=>{this.setState({isChecked:state})}}/> */}
         {/* <DatePicker showToday onChange={(month,day,year)=>console.log(month,day,year)}/> */}
@@ -77,7 +80,7 @@ export default class App extends Component {
         {/* <AccountBubble radius={200} label='Account Bubble' name='Account Bubble'/>
         <AccountBubble radius={100} label='Account Bubble' name='Account Bubble'/>
         <AccountBubble radius={45} label='Account Bubble' name='Mattias Verhoeven'/> */}
-        <ContainedButton tabindex={10} backgroundColor='#ff0ff0' className='LULW' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
+        {/* <ContainedButton tabindex={10} backgroundColor='#ff0ff0' className='LULW' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton> */}
         {/* <ContainedButton tabindex={10} backgroundColor='#ff0ff0' onClick={()=>{this.setState({isChecked:false})}}>Login</ContainedButton>
         <ContainedButton backgroundColor='#ff0000' uppercase onClick={()=>{this.setState({modalVisible:true})}}>ContainedButton</ContainedButton>
         <OutlineButton borderColor='#0000ff' uppercase>OutlineButton</OutlineButton>
@@ -118,11 +121,13 @@ export default class App extends Component {
           }
           />
         </div>} labelColor='#000' name='Account Bubble'/> */}
-        <ConfirmDialog  title='ConfirmDialog' isBlocking description='ConfirmDialog description' closeButtonClassName='test' visible={modalVisible} closable onDismiss={()=>this.setState({modalVisible:false})} onClose={()=>this.setState({modalVisible:false})}
+        {/* <ConfirmDialog  title='ConfirmDialog' isBlocking description='ConfirmDialog description' closeButtonClassName='test' visible={modalVisible} closable onDismiss={()=>this.setState({modalVisible:false})} onClose={()=>this.setState({modalVisible:false})}
         footerButtons={footerButtonsRight}
-                />
+                /> */}
 
         {/* <ColorPicker color='#FF6123' /> */}
+
+        <Card menuVisible title='Card' width={300} height={150} footer={footerButtonsRight} />
       </div>
     )
   }

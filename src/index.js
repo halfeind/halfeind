@@ -28,11 +28,16 @@ import {Dropdown} from './components/select/index';
 //switch
 import {Switch}  from './components/switch/index';
 
+//table
+import { Table } from './components/table/index';
+
 //tag
 import { Tag } from './components/tag/index';
 
-//style
+//card
+import { Card } from './components/card/index';
 
+//style
 import { Style } from './components/style/index';
 
 export {
@@ -46,6 +51,8 @@ export {
     DatePicker, MonthPicker,TimePicker,TimeFormat,
     Dropdown,
     Switch,
+    Table,
     Tag,
+    Card,
     Style
 };

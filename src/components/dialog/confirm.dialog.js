@@ -52,15 +52,17 @@ class ConfirmDialog extends Component {
                         <div className={dStyle.c_c}>
                             <div className={dStyle.d}>{description}</div>
                         </div>
-                        <div className={dStyle.f_c}>
-                            <div className={dStyle.f_l_c}>
+                        {footerButtons&&(
+                            <div className={dStyle.f_c}>
+                                <div className={dStyle.f_l_c}>
+                                </div>
+                                <div className={dStyle.f_r_c}>
+                                    {footerButtons.map((footerButton)=>
+                                        footerButton
+                                    )}
+                                </div>
                             </div>
-                            <div className={dStyle.f_r_c}>
-                                {footerButtons.map((footerButton)=>
-                                    footerButton
-                                )}
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             )
