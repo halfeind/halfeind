@@ -36,7 +36,7 @@ class Card extends Component {
         const menuItemStyle = `${crdStyle.do} ${(menuItemClassName?menuItemClassName:'')}`;
 
         return (
-            <div className={cardStyle} style={{width:width, height: height}}>
+            <div className={cardStyle} style={{minWidth:width, minHeight: height}}>
                 <div className={crdStyle.hc}>
                         <div className={crdStyle.t}>{title}</div>
                         {menuItems&&(
