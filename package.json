@@ -51,7 +51,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
     "halfeind-utils": "0.0.3-alpha.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^3.3.1",
